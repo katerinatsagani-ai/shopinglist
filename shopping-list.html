@@ -29,141 +29,74 @@ body {
   line-height: 1;
   letter-spacing: -0.03em;
 }
-.top p {
-  font-size: 0.75rem;
-  color: #999;
-  font-weight: 300;
-}
-.progress-wrap {
-  text-align: right;
-}
+.top p { font-size: 0.75rem; color: #999; font-weight: 300; }
+.progress-wrap { text-align: right; }
 .progress-num {
   font-family: 'Syne', sans-serif;
   font-size: 1.4rem;
   font-weight: 700;
   color: #111;
 }
-.progress-label {
-  font-size: 0.7rem;
-  color: #aaa;
-}
+.progress-label { font-size: 0.7rem; color: #aaa; }
 .progress-bar-bg {
-  width: 120px;
-  height: 3px;
-  background: #e5e5e5;
-  border-radius: 2px;
-  margin-top: 6px;
+  width: 120px; height: 3px;
+  background: #e5e5e5; border-radius: 2px; margin-top: 6px;
 }
 .progress-bar-fill {
-  height: 3px;
-  background: #111;
-  border-radius: 2px;
-  transition: width 0.3s ease;
-  width: 0%;
+  height: 3px; background: #111; border-radius: 2px;
+  transition: width 0.3s ease; width: 0%;
 }
-
 .controls {
-  max-width: 640px;
-  margin: 0 auto 1.5rem;
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
+  max-width: 640px; margin: 0 auto 0.5rem;
+  display: flex; gap: 8px; flex-wrap: wrap;
 }
 .ctrl-btn {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.72rem;
-  padding: 0.35rem 0.85rem;
-  border-radius: 999px;
-  border: 1px solid #ddd;
-  background: #fff;
-  cursor: pointer;
-  color: #555;
-  transition: all 0.15s;
+  font-family: 'Inter', sans-serif; font-size: 0.72rem;
+  padding: 0.35rem 0.85rem; border-radius: 999px;
+  border: 1px solid #ddd; background: #fff;
+  cursor: pointer; color: #555; transition: all 0.15s;
 }
 .ctrl-btn:hover { border-color: #999; color: #111; }
 .ctrl-btn.danger { border-color: #f0a0a0; color: #c0392b; }
 .ctrl-btn.danger:hover { background: #fff5f5; }
-
-.section {
-  max-width: 640px;
-  margin: 0 auto 1.2rem;
+.saved-badge {
+  max-width: 640px; margin: 0.4rem auto 1rem;
+  font-size: 0.72rem; color: #2c7a4b;
+  text-align: right; opacity: 0; transition: opacity 0.3s;
 }
+.saved-badge.show { opacity: 1; }
+.section { max-width: 640px; margin: 0 auto 1.2rem; }
 .section-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 0.5rem;
-  padding-bottom: 0.4rem;
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 0.5rem; padding-bottom: 0.4rem;
   border-bottom: 1px solid #ebebeb;
 }
-.section-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
+.section-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
 .section-title {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #555;
+  font-family: 'Syne', sans-serif; font-size: 0.75rem;
+  font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; color: #555;
 }
-.section-count {
-  font-size: 0.7rem;
-  color: #bbb;
-  margin-left: auto;
-}
-
+.section-count { font-size: 0.7rem; color: #bbb; margin-left: auto; }
 .item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 0.55rem 0.6rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.12s;
-  user-select: none;
+  display: flex; align-items: center; gap: 12px;
+  padding: 0.55rem 0.6rem; border-radius: 8px;
+  cursor: pointer; transition: background 0.12s; user-select: none;
 }
 .item:hover { background: #f3f3f0; }
 .item.checked { opacity: 0.38; }
 .item.checked .item-name { text-decoration: line-through; }
-
 .checkbox {
-  width: 18px;
-  height: 18px;
-  border: 1.5px solid #ccc;
-  border-radius: 4px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.15s;
-  background: #fff;
+  width: 18px; height: 18px; border: 1.5px solid #ccc;
+  border-radius: 4px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s; background: #fff;
 }
-.item.checked .checkbox {
-  background: #111;
-  border-color: #111;
-}
-.checkmark {
-  display: none;
-  width: 10px;
-  height: 10px;
-}
+.item.checked .checkbox { background: #111; border-color: #111; }
+.checkmark { display: none; width: 10px; height: 10px; }
 .item.checked .checkmark { display: block; }
-
-.item-name {
-  font-size: 0.88rem;
-  color: #111;
-  flex: 1;
-}
-.item-qty {
-  font-size: 0.75rem;
-  color: #aaa;
-  font-weight: 300;
-  white-space: nowrap;
-}
+.item-name { font-size: 0.88rem; color: #111; flex: 1; }
+.item-qty { font-size: 0.75rem; color: #aaa; font-weight: 300; white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -181,113 +114,101 @@ body {
 </div>
 
 <div class="controls">
-  <button class="ctrl-btn" onclick="expandAll()">Επέκταση όλων</button>
   <button class="ctrl-btn" onclick="checkAll()">Επιλογή όλων</button>
   <button class="ctrl-btn danger" onclick="uncheckAll()">Επαναφορά</button>
 </div>
+<div class="saved-badge" id="saved-badge">Αποθηκεύτηκε</div>
 
 <div id="list"></div>
 
 <script>
 const categories = [
-  {
-    name: "Κρέας & Ψάρι",
-    color: "#c0392b",
-    items: [
-      { name: "Στήθος κοτόπουλο", qty: "1 kg" },
-      { name: "Κιμάς μοσχαρίσιος 5% λιπαρά", qty: "400g" },
-      { name: "Σολομός φιλέτο", qty: "300g" },
-      { name: "Μπακαλιάρος ή ψάρι σχάρας", qty: "300g" },
-      { name: "Τόνος σε νερό (κονσέρβα)", qty: "3 κονσέρβες" },
-      { name: "Ζαμπόν γαλοπούλας", qty: "200g" },
-    ]
-  },
-  {
-    name: "Γαλακτοκομικά & Αυγά",
-    color: "#d4813a",
-    items: [
-      { name: "Αυγά", qty: "18 τεμ." },
-      { name: "Στραγγιστό γιαούρτι 2%", qty: "1 kg" },
-      { name: "Γάλα (αγελάδας ή φυτικό)", qty: "1 λίτρο" },
-      { name: "Cottage cheese", qty: "400g" },
-      { name: "Φέτα ΠΟΠ", qty: "200g" },
-      { name: "Ανθότυρο", qty: "150g" },
-    ]
-  },
-  {
-    name: "Δημητριακά & Όσπρια",
-    color: "#2c7a4b",
-    items: [
-      { name: "Βρώμη (νιφάδες)", qty: "500g" },
-      { name: "Ψωμί ολικής άλεσης", qty: "1 καρβέλι" },
-      { name: "Ζυμαρικά ολικής άλεσης", qty: "500g" },
-      { name: "Ρύζι (καστανό ή λευκό)", qty: "500g" },
-      { name: "Κινόα", qty: "300g" },
-      { name: "Φακές", qty: "500g" },
-      { name: "Ρυζογκοφρέτες", qty: "1 πακέτο" },
-    ]
-  },
-  {
-    name: "Λαχανικά",
-    color: "#4a6fa5",
-    items: [
-      { name: "Ντομάτες", qty: "1 kg" },
-      { name: "Αγγούρια", qty: "4 τεμ." },
-      { name: "Παπρικά (κόκκινη, πράσινη)", qty: "4 τεμ." },
-      { name: "Σπανάκι", qty: "300g" },
-      { name: "Μπρόκολο", qty: "500g" },
-      { name: "Καρότα", qty: "500g" },
-      { name: "Πατάτες", qty: "4 μεσαίες" },
-      { name: "Φασολάκια", qty: "300g" },
-      { name: "Πράσο", qty: "2 τεμ." },
-      { name: "Σέλινο", qty: "1 ματσάκι" },
-    ]
-  },
-  {
-    name: "Φρούτα",
-    color: "#8e44ad",
-    items: [
-      { name: "Μπανάνες", qty: "6 τεμ." },
-      { name: "Μήλα", qty: "5 τεμ." },
-      { name: "Πορτοκάλια", qty: "4 τεμ." },
-      { name: "Αχλάδια ή ροδάκινα", qty: "4 τεμ." },
-      { name: "Φράουλες", qty: "300g" },
-      { name: "Kiwi", qty: "4 τεμ." },
-    ]
-  },
-  {
-    name: "Ξηροί Καρποί & Λίπη",
-    color: "#7f8c00",
-    items: [
-      { name: "Αμύγδαλα", qty: "200g" },
-      { name: "Ανάμικτοι ξηροί καρποί", qty: "200g" },
-      { name: "Αβοκάντο", qty: "3 τεμ." },
-      { name: "Ελαιόλαδο εξαιρετικό παρθένο", qty: "1 φιάλη" },
-      { name: "Βούτυρο αμυγδάλου", qty: "1 βαζάκι" },
-      { name: "Ελιές", qty: "200g" },
-    ]
-  },
-  {
-    name: "Παντοπωλείο & Βασικά",
-    color: "#555",
-    items: [
-      { name: "Μέλι", qty: "1 βαζάκι" },
-      { name: "Χούμους", qty: "1 συσκευασία" },
-      { name: "Σάλτσα ντομάτας (παρασκευή)", qty: "2 κονσέρβες" },
-      { name: "Σάλτσα soy χαμηλή σε αλάτι", qty: "1 μπουκάλι" },
-      { name: "Κανέλα", qty: "1 μπαχαρικό" },
-      { name: "Ρίγανη", qty: "1 μπαχαρικό" },
-      { name: "Αλάτι & Πιπέρι", qty: "αν χρειαστεί" },
-    ]
-  }
+  { name: "Κρέας & Ψάρι", color: "#c0392b", items: [
+    { name: "Στήθος κοτόπουλο", qty: "1 kg" },
+    { name: "Κιμάς μοσχαρίσιος 5% λιπαρά", qty: "400g" },
+    { name: "Σολομός φιλέτο", qty: "300g" },
+    { name: "Μπακαλιάρος ή ψάρι σχάρας", qty: "300g" },
+    { name: "Τόνος σε νερό (κονσέρβα)", qty: "3 κονσέρβες" },
+    { name: "Ζαμπόν γαλοπούλας", qty: "200g" },
+  ]},
+  { name: "Γαλακτοκομικά & Αυγά", color: "#d4813a", items: [
+    { name: "Αυγά", qty: "18 τεμ." },
+    { name: "Στραγγιστό γιαούρτι 2%", qty: "1 kg" },
+    { name: "Γάλα (αγελάδας ή φυτικό)", qty: "1 λίτρο" },
+    { name: "Cottage cheese", qty: "400g" },
+    { name: "Φέτα ΠΟΠ", qty: "200g" },
+    { name: "Ανθότυρο", qty: "150g" },
+  ]},
+  { name: "Δημητριακά & Όσπρια", color: "#2c7a4b", items: [
+    { name: "Βρώμη (νιφάδες)", qty: "500g" },
+    { name: "Ψωμί ολικής άλεσης", qty: "1 καρβέλι" },
+    { name: "Ζυμαρικά ολικής άλεσης", qty: "500g" },
+    { name: "Ρύζι (καστανό ή λευκό)", qty: "500g" },
+    { name: "Κινόα", qty: "300g" },
+    { name: "Φακές", qty: "500g" },
+    { name: "Ρυζογκοφρέτες", qty: "1 πακέτο" },
+  ]},
+  { name: "Λαχανικά", color: "#4a6fa5", items: [
+    { name: "Ντομάτες", qty: "1 kg" },
+    { name: "Αγγούρια", qty: "4 τεμ." },
+    { name: "Παπρικά (κόκκινη, πράσινη)", qty: "4 τεμ." },
+    { name: "Σπανάκι", qty: "300g" },
+    { name: "Μπρόκολο", qty: "500g" },
+    { name: "Καρότα", qty: "500g" },
+    { name: "Πατάτες", qty: "4 μεσαίες" },
+    { name: "Φασολάκια", qty: "300g" },
+    { name: "Πράσο", qty: "2 τεμ." },
+    { name: "Σέλινο", qty: "1 ματσάκι" },
+  ]},
+  { name: "Φρούτα", color: "#8e44ad", items: [
+    { name: "Μπανάνες", qty: "6 τεμ." },
+    { name: "Μήλα", qty: "5 τεμ." },
+    { name: "Πορτοκάλια", qty: "4 τεμ." },
+    { name: "Αχλάδια ή ροδάκινα", qty: "4 τεμ." },
+    { name: "Φράουλες", qty: "300g" },
+    { name: "Kiwi", qty: "4 τεμ." },
+  ]},
+  { name: "Ξηροί Καρποί & Λίπη", color: "#7f8c00", items: [
+    { name: "Αμύγδαλα", qty: "200g" },
+    { name: "Ανάμικτοι ξηροί καρποί", qty: "200g" },
+    { name: "Αβοκάντο", qty: "3 τεμ." },
+    { name: "Ελαιόλαδο εξαιρετικό παρθένο", qty: "1 φιάλη" },
+    { name: "Βούτυρο αμυγδάλου", qty: "1 βαζάκι" },
+    { name: "Ελιές", qty: "200g" },
+  ]},
+  { name: "Παντοπωλείο & Βασικά", color: "#555", items: [
+    { name: "Μέλι", qty: "1 βαζάκι" },
+    { name: "Χούμους", qty: "1 συσκευασία" },
+    { name: "Σάλτσα ντομάτας", qty: "2 κονσέρβες" },
+    { name: "Σάλτσα soy χαμηλή σε αλάτι", qty: "1 μπουκάλι" },
+    { name: "Κανέλα", qty: "1 μπαχαρικό" },
+    { name: "Ρίγανη", qty: "1 μπαχαρικό" },
+    { name: "Αλάτι & Πιπέρι", qty: "αν χρειαστεί" },
+  ]}
 ];
 
+const STORAGE_KEY = 'shopping_list_state';
 let state = {};
+
+function loadState() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) state = JSON.parse(saved);
+  } catch(e) { state = {}; }
+}
+
+function saveState() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    const badge = document.getElementById('saved-badge');
+    badge.classList.add('show');
+    setTimeout(() => badge.classList.remove('show'), 1500);
+  } catch(e) {}
+}
 
 function render() {
   const container = document.getElementById('list');
   container.innerHTML = '';
-  let total = 0;
   categories.forEach((cat, ci) => {
     const sec = document.createElement('div');
     sec.className = 'section';
@@ -297,12 +218,10 @@ function render() {
         <div class="section-dot" style="background:${cat.color}"></div>
         <div class="section-title">${cat.name}</div>
         <div class="section-count">${checkedInCat}/${cat.items.length}</div>
-      </div>
-    `;
+      </div>`;
     cat.items.forEach((item, ii) => {
       const key = `${ci}-${ii}`;
       const checked = !!state[key];
-      total++;
       const div = document.createElement('div');
       div.className = 'item' + (checked ? ' checked' : '');
       div.innerHTML = `
@@ -312,36 +231,38 @@ function render() {
           </svg>
         </div>
         <div class="item-name">${item.name}</div>
-        <div class="item-qty">${item.qty}</div>
-      `;
-      div.onclick = () => { state[key] = !state[key]; updateProgress(); render(); };
+        <div class="item-qty">${item.qty}</div>`;
+      div.onclick = () => {
+        state[key] = !state[key];
+        saveState();
+        updateProgress();
+        render();
+      };
       sec.appendChild(div);
     });
     container.appendChild(sec);
   });
-  document.getElementById('total-count').textContent = total;
 }
 
 function updateProgress() {
-  const total = Object.keys(state).length;
-  const checked = Object.values(state).filter(Boolean).length;
   const allItems = categories.reduce((s, c) => s + c.items.length, 0);
+  const checked = Object.values(state).filter(Boolean).length;
   document.getElementById('checked-count').textContent = checked;
   document.getElementById('total-count').textContent = allItems;
-  const pct = allItems > 0 ? Math.round((checked / allItems) * 100) : 0;
-  document.getElementById('bar').style.width = pct + '%';
+  document.getElementById('bar').style.width = Math.round((checked / allItems) * 100) + '%';
 }
 
 function checkAll() {
   categories.forEach((cat, ci) => cat.items.forEach((_, ii) => { state[`${ci}-${ii}`] = true; }));
-  updateProgress(); render();
+  saveState(); updateProgress(); render();
 }
+
 function uncheckAll() {
   state = {};
-  updateProgress(); render();
+  saveState(); updateProgress(); render();
 }
-function expandAll() {}
 
+loadState();
 render();
 updateProgress();
 </script>
